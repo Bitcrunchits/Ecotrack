@@ -1,56 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECOTRACK</title>
-    
-    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <!-- Iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
+    <!-- fonts google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Modo oscuro/claro tailwind -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
 
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="text-center">
-    <div class="bg-gray-100 p-4 min-h-screen flex flex-col justify-between">
-        
-        <header>
-            <div class="text-gray-900 font-bold border-b-2 border-gray-950 px-4 py-2 sm:p-6">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl py-2">ECOTRACK</h1>
+    <div class="bg-gray-100 dark:bg-gray-900 p-4 min-h-screen flex flex-col justify-between">
+        <header class="relative">
+            <nav class="absolute top-0 right-0 p-4">
+                <button id="theme-toggle"
+                    class="w-10 h-10 flex items-center justify-center rounded-md bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-2xl shadow-md transition-colors duration-300 hover:scale-105">
+                    <i class='bx bxs-moon'></i>
+                </button>
+            </nav>
+
+            <div
+                class="text-gray-900 dark:text-yellow-500 font-bold border-b-2 border-gray-950 dark:border-gray-400 p-6">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl py-4">ECOTRACK</h1>
                 <h4 class="text-xl sm:text-2xl md:text-3xl">Tu huella del carbono personal</h4>
             </div>
         </header>
 
         <main class="py-4 px-4 flex-grow">
-            <div class="text-gray-900 font-bold">
-                <h1 class="text-blue-800 text-3xl sm:text-4xl md:text-5xl">Bienvenido</h1>
+            <div class="text-gray-900 dark:text-gray-100 font-bold">
+                <h1 class="text-blue-800 dark:text-blue-400 text-3xl sm:text-4xl md:text-5xl">Bienvenido</h1>
             </div>
-            <div class="text-blue-800 text-sm sm:text-base md:text-lg py-2">
-                <p>Esta es una Aplicación dedicada al cálculo de la cantidad de gases
-                    de efecto invernadero que genera una persona en sus actividades diarias.
-                </p>
-
-                <p class="mt-2">Se mide en toneladas de Dióxido de Carbono por año y su equivalente en
-                    compensación
-                    en la cantidad de árboles que debería plantar para equilibrarlo.
+            <div class="text-blue-800 dark:text-blue-400 text-sm sm:text-base md:text-lg py-2">
+                <p>Conoce tu huella de carbono. Descubre tu contribución al calentamiento global 
+                    y cómo puedes compensarla plantando árboles.
                 </p>
             </div>
             <div class="flex flex-col justify-center items-center mt-6">
                 <button
-                    class="w-full max-w-sm bg-green-600 hover:bg-yellow-400 text-lg text-black font-bold px-4 py-4 rounded-xl">Calcula
+                    class="w-full max-w-sm bg-green-600 hover:bg-yellow-400 text-lg text-black dark:bg-green-400 dark:hover:bg-yellow-500 font-bold px-4 py-4 rounded-xl">Calcula
                     tu Huella</button>
             </div>
         </main>
 
-        <footer class="text-blue-800 text-xs sm:text-sm md:text-base py-2 border-t-2 border-gray-950 ">
+        <footer
+            class="text-blue-800 dark:text-blue-400 text-xs sm:text-sm md:text-base py-2 border-t-2 border-gray-950 dark:border-t-gray-400">
             <p class="underline">Creado por alumnos de ITS Cipolletti</p>
         </footer>
     </div>
-    
+
     <script src="main.js"></script>
 </body>
+
 </html>
