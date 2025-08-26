@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECOTRACK</title>
-    <!-- Iconos -->
+    
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <!-- Recursos Tailwind -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <div>
+<body class="text-center">
+    <div class="bg-gray-100 p-4 min-h-screen flex flex-col justify-between">
+        
         <header>
-            <div>
-                <h1>ECOTRACK</h1>
-                <h4>Tu huella del carbono personal</h4>
+            <div class="text-gray-900 font-bold border-b-2 border-gray-950 px-4 py-2 sm:p-6">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl py-2">ECOTRACK</h1>
+                <h4 class="text-xl sm:text-2xl md:text-3xl">Tu huella del carbono personal</h4>
             </div>
         </header>
 
-        <main>
-            <div>
-                <h1>Bienvenido</h1>
-
+        <main class="py-4 px-4 flex-grow">
+            <div class="text-gray-900 font-bold">
+                <h1 class="text-blue-800 text-3xl sm:text-4xl md:text-5xl">Bienvenido</h1>
             </div>
-            <div>
-                <p>Esta es una Aplicación dedicada al calculo de la cantidad de gases
-                    de efecto invernadero que genera una persona en susu actividades diarias.
+            <div class="text-blue-800 text-sm sm:text-base md:text-lg py-2">
+                <p>Esta es una Aplicación dedicada al cálculo de la cantidad de gases
+                    de efecto invernadero que genera una persona en sus actividades diarias.
                 </p>
 
-                <p>Se mide en toneladas de Dioxido de Carbono por año y su aquivalente en
+                <p class="mt-2">Se mide en toneladas de Dióxido de Carbono por año y su equivalente en
                     compensación
-                    en la cantidad de árboles que debería plantar para equilibriarlo.
+                    en la cantidad de árboles que debería plantar para equilibrarlo.
                 </p>
             </div>
-            <div>
-                <button>Calcula tu Huella</button>
+            <div class="flex flex-col justify-center items-center mt-6">
+                <button
+                    class="w-full max-w-sm bg-green-600 hover:bg-yellow-400 text-lg text-black font-bold px-4 py-4 rounded-xl">Calcula
+                    tu Huella</button>
             </div>
-
         </main>
 
-        <footer>
-            <p>Creado por alumnos de ITS Cipolletti</p>
+        <footer class="text-blue-800 text-xs sm:text-sm md:text-base py-2 border-t-2 border-gray-950 ">
+            <p class="underline">Creado por alumnos de ITS Cipolletti</p>
         </footer>
-
-
-        <script src="main.js"></script>
     </div>
+    
+    <script src="main.js"></script>
 </body>
-
 </html>
