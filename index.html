@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECOTRACK</title>
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Iconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- CSS -->
@@ -42,8 +44,9 @@
         </header>
 
         <main></main>
-        <div class="max-w-2xl mx-auto py-4 px-4 flex-grow p-8 rounded-3xl dark:bg-gray-800
-            shadow-inner shadow-blue-300/100 dark:shadow-blue-700/30">
+
+        <div class="max-w-xl mx-auto py-4 px-4 flex-grow p-8 rounded-3xl dark:bg-gray-800
+            shadow-inner shadow-blue-300/100 dark:shadow-blue-700/30 flex flex-col">
             <div class="font-bold">
                 <h1 class="text-blue-800 dark:text-cyan-300 text-3xl sm:text-4xl md:text-5xl">Bienvenido</h1>
             </div>
@@ -52,19 +55,20 @@
                     y cómo puedes compensarla plantando árboles.
                 </p>
             </div>
-            <div class="flex flex-col justify-center items-center mt-6">
+            <div class="flex flex-col md:flex-row justify-center items-center mt-6 pb-6">
                 <button
                     class="w-full max-w-sm bg-cyan-600 hover:bg-cyan-500 text-lg text-black dark:bg-cyan-600 dark:hover:bg-cyan-500 font-bold px-4 py-4 rounded-xl">Calcula
-                    tu Huella</button>
+                    tu Huella
+                </button>
             </div>
         </div>
         </main>
 
-        <footer class="text-blue-800 dark:text-blue-400 text-xs sm:text-sm md:text-base py-2">
+        <footer class="text-blue-800 dark:text-blue-400 text-xs sm:text-sm md:text-base py-2 mt-auto self-center">
             <p class="underline">Creado por alumnos de ITS Cipolletti</p>
         </footer>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 

@@ -1,6 +1,7 @@
 const themeToggle = document.getElementById('theme-toggle');
 const htmlElement = document.querySelector('html');
 
+
 // Función para cambiar el tema
 const setTheme = (theme) => {
     htmlElement.classList.remove('light', 'dark');
