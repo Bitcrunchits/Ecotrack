@@ -15,11 +15,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-     <!-- Tailwind -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Modo oscuro/claro tailwind -->
-        <script>
+    <script>
         tailwind.config = {
             darkMode: 'class',
             content: [
@@ -35,7 +35,7 @@
             plugins: [],
         }
     </script>
-  
+
 </head>
 
 <body class="text-center">
@@ -57,28 +57,67 @@
             <div class="max-w-xl mx-auto py-4 px-4 p-8 rounded-3xl 
             shadow-inner shadow-blue-300/100 dark:shadow-blue-700/30
             max-h-96 lg:max-h-screen overflow-y-auto">
-                <form action="">
-                    <!-- Slider main container -->
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            ...
+
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <form action="" id="gasolina">
+                                <fieldset class="form-step">
+                                    <legend
+                                        class="step-title text-gray-900 dark:text-gray-100 font-bold mb-4 text-2xl sm:text-3xl">
+                                        Transporte 🚗</legend>
+                                    <div class="input-group mb-4">
+                                        <label for="transport-type"
+                                            class="text-gray-900 dark:text-gray-100 block mb-2">Medio de
+                                            transporte:</label>
+                                        <select id="transport-type" name="transport_type" required
+                                            class="w-full p-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            <option value="" disabled selected>Selecciona una opción</option>
+                                            <option value="walking">Caminando</option>
+                                            <option value="vehicle">Vehículo (incluye público)</option>
+                                            <option value="bike">Bicicleta</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group mb-4">
+                                        <label for="km-traveled"
+                                            class="text-gray-900 dark:text-gray-100 block mb-2">Kilómetros
+                                            recorridos
+                                            mensualmente:</label>
+                                        <input type="number" id="km-traveled" name="km_traveled" required min="0"
+                                            placeholder="Ej: 100"
+                                            class="w-full p-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    </div>
                         </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
 
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
 
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
+                        <div class="swiper-slide">Slide 2</div>
+
+
+                        <div class="swiper-slide">Slide 3</div>
+
+
+                        <div class="swiper-slide">Slide 3</div>
+
+
+                        <div class="swiper-slide">Slide 3</div>
+                        ...
                     </div>
-                </form>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
 
             </div>
         </main>
