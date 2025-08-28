@@ -15,16 +15,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Modo oscuro/claro tailwind -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
-    </script>
-
-    <!-- Tailwind -->
+     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Modo oscuro/claro tailwind -->
+        <script>
+        tailwind.config = {
+            darkMode: 'class',
+            content: [
+                "./**/*.{html,js}",
+            ],
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    }
+                },
+            },
+            plugins: [],
+        }
+    </script>
+  
 </head>
 
 <body class="text-center">
@@ -42,24 +53,34 @@
                 <h4 class="text-xl sm:text-2xl md:text-3xl py-2">Tu huella del carbono personal</h4>
             </div>
         </header>
-        <main></main>
-                <div class="max-w-xl mx-auto py-4 px-4 flex-grow p-8 rounded-3xl dark:bg-gray-800
-            shadow-inner shadow-blue-300/100 dark:shadow-blue-700/30 flex flex-col">
-            <div class="font-bold">
-                <h1 class="text-blue-800 dark:text-cyan-300 text-3xl sm:text-4xl md:text-5xl">Bienvenido</h1>
+        <main>
+            <div class="max-w-xl mx-auto py-4 px-4 p-8 rounded-3xl 
+            shadow-inner shadow-blue-300/100 dark:shadow-blue-700/30
+            max-h-96 lg:max-h-screen overflow-y-auto">
+                <form action="">
+                    <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </form>
+
             </div>
-            <div class="text-blue-800 dark:text-cyan-300 text-sm sm:text-base md:text-lg py-2">
-                <p>Conoce tu huella de carbono. Descubre tu contribución al calentamiento global
-                    y cómo puedes compensarla plantando árboles.
-                </p>
-            </div>
-            <div class="flex flex-col md:flex-row justify-center items-center mt-6 pb-6">
-                <button
-                    class="w-full max-w-sm bg-cyan-600 hover:bg-cyan-500 text-lg text-black dark:bg-cyan-600 dark:hover:bg-cyan-500 font-bold px-4 py-4 rounded-xl">Calcula
-                    tu Huella
-                </button>
-            </div>
-        </div>
         </main>
 
         <footer class="text-blue-800 dark:text-blue-400 text-xs sm:text-sm md:text-base py-2 mt-auto self-center">

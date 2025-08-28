@@ -8,3 +8,7 @@
     border: solid thin red;
 } */
 
+.swiper {
+  width: auto;
+  height: 100%;
+}
