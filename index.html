@@ -39,7 +39,7 @@
 </head>
 
 <body class="text-center">
-    <div class="bg-slate-200 dark:bg-zinc-800 p-4 min-h-screen flex flex-col justify-between">
+    <div class="bg-slate-300 dark:bg-zinc-800 p-4 min-h-screen flex flex-col justify-between">
 
         <header class="relative">
             <nav class="absolute top-0 right-0 p-2">
@@ -55,42 +55,42 @@
         </header>
         <main>
             <div class="max-w-xl mx-auto py-4 px-4 p-8 rounded-3xl 
-            shadow-inner shadow-blue-300/100 dark:shadow-blue-700/30
-            max-h-96 lg:max-h-screen overflow-y-auto">
+            shadow-inner shadow-blue-500/100 dark:shadow-blue-700/30
+            h-80 md:h">
 
 
                 <!-- Slider main container -->
                 <div class="swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
-                        
+
                         <!-- Slides -->
                         <div class="swiper-slide">
                             <form action="" id="gasolina">
-                                <fieldset class="form-step">
+                                <fieldset class="form-step space-y-4">
                                     <legend
                                         class="step-title text-gray-900 dark:text-gray-100 font-bold mb-4 text-2xl sm:text-3xl">
                                         Transporte 🚗</legend>
-                                    <div class="input-group mb-4">
+                                    <div class="input-group sm:mb-4 md:mb5 lg:mb8 xl:mb12">
                                         <label for="transport-type"
                                             class="text-gray-900 dark:text-gray-100 block mb-2">Medio de
                                             transporte:</label>
                                         <select id="transport-type" name="transport_type" required
-                                            class="w-full p-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            class="w-1/2 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <option value="walking">Caminando</option>
                                             <option value="vehicle">Vehículo (incluye público)</option>
                                             <option value="bike">Bicicleta</option>
                                         </select>
                                     </div>
-                                    <div class="input-group mb-4">
+                                    <div class="input-group space-y-4">
                                         <label for="km-traveled"
-                                            class="text-gray-900 dark:text-gray-100 block mb-2">Kilómetros
+                                            class="text-gray-900 dark:text-gray-100 block">Kilómetros
                                             recorridos
                                             mensualmente:</label>
                                         <input type="number" id="km-traveled" name="km_traveled" required min="0"
                                             placeholder="Ej: 100"
-                                            class="w-full p-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            class="w-1/2 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                     </div>
                         </div>
 
