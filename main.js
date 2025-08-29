@@ -60,41 +60,84 @@ const swiper = new Swiper('.swiper', {
 
 const userResponses = {};
 
+// Función universal para validar y capturar datos del formulario actual
+function handleForm() {
+    const currentSlide = swiper.slides[swiper.realIndex];
+    const currentForm = currentSlide.querySelector('form');
+    const nextButton = document.querySelector('.swiper-button-next');
+
+    // Deshabilita el botón de siguiente por defecto
+    nextButton.classList.add('swiper-button-disabled');
+
+    if (!currentForm) {
+        // No hay formulario en este slide, habilita el botón de siguiente
+        nextButton.classList.remove('swiper-button-disabled');
+        return;
+    }
+
+    const requiredInputs = currentForm.querySelectorAll('[required]');
+
+    // Función para verificar la validez del formulario
+    const checkValidity = () => {
+        let isFormValid = true;
+        requiredInputs.forEach(input => {
+            if (!input.value) {
+                isFormValid = false;
+            }
+        });
+
+        if (isFormValid) {
+            nextButton.classList.remove('swiper-button-disabled');
+        } else {
+            nextButton.classList.add('swiper-button-disabled');
+        }
+    };
+
+    // Escucha cambios en los inputs para validar el formulario
+    currentForm.addEventListener('input', checkValidity);
+
+    // Llama a la función de validación una vez al cargar el slide
+    checkValidity();
+}
+
 // Escuchar el evento de cambio de diapositiva
 swiper.on('slideChange', () => {
-    // Obtener el índice de la diapositiva que el usuario acaba de dejar
+    // Captura los datos del formulario que se acaba de dejar
     const previousSlideIndex = swiper.previousIndex;
 
-    // Usar un switch para manejar la captura de datos de cada formulario
     switch (previousSlideIndex) {
-        // Suponiendo que el formulario de transporte está en la diapositiva con índice 1
         case 1:
-            const transportType = document.getElementById('transport-type').value;
-            const kmTraveled = document.getElementById('km-traveled').value;
-
-            userResponses.transporte = {
-                tipo: transportType,
-                km: kmTraveled
-            };
-            console.log("Datos de transporte capturados:", userResponses.transporte);
+            const transportType = document.getElementById('transport-type');
+            const kmTraveled = document.getElementById('km-traveled');
+            if (transportType && kmTraveled) {
+                userResponses.transporte = {
+                    tipo: transportType.value,
+                    km: kmTraveled.value
+                };
+                console.log("Datos de transporte capturados:", userResponses.transporte);
+            }
             break;
 
-        // Suponiendo que el formulario de electricidad está en la diapositiva con índice 2
         case 2:
-            const kilowattsHome = document.getElementById('kilowatts-home').value;
-            const kilowattsOffice = document.getElementById('kilowatts-office').value;
-
-            userResponses.electricidad = {
-                hogar: kilowattsHome,
-                trabajo: kilowattsOffice
-            };
-            console.log("Datos de electricidad capturados:", userResponses.electricidad);
-            break;
-
-        // Puedes seguir agregando más casos para cada formulario
-
-        default:
-            // No hacer nada si el slide no tiene un formulario asociado
+            const kilowattsHome = document.getElementById('kilowatts-home');
+            const gasM3 = document.getElementById('gas-m3');
+            const woodKg = document.getElementById('wood-kg');
+            if (kilowattsHome && gasM3) {
+                userResponses.energia = {
+                    electricidad: kilowattsHome.value,
+                    gas: gasM3.value,
+                    lena: woodKg ? woodKg.value : ''
+                };
+                console.log("Datos de energía capturados:", userResponses.energia);
+            }
             break;
     }
+    
+    // Ejecuta el manejo del formulario para la nueva diapositiva
+    handleForm();
+});
+
+// Llama a la función al cargar la página para la primera diapositiva
+document.addEventListener('DOMContentLoaded', () => {
+    handleForm();
 });
