@@ -30,7 +30,7 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-//initialing SWIPER
+//!initialing SWIPER
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
