@@ -39,7 +39,7 @@
 </head>
 
 <body class="text-center">
-    <div class="bg-slate-300 dark:bg-zinc-800 p-4 min-h-screen flex flex-col justify-between">
+    <div class="bg-sky-200 dark:bg-zinc-800 p-4 min-h-screen flex flex-col justify-between">
 
         <header class="relative">
             <nav class="absolute top-0 right-0 p-2">
@@ -48,14 +48,14 @@
                     <i class='bx bxs-moon'></i>
                 </button>
             </nav>
-            <div class="text-blue-800 dark:text-teal-600 font-bold p-0">
+            <div class="text-blue-500 text-shadow-lg/150 dark:text-teal-600 font-bold p-0">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">ECOTRACK</h1>
                 <h4 class="text-xl sm:text-2xl md:text-3xl py-2">Tu huella del carbono personal</h4>
             </div>
         </header>
         <main>
             <div class="max-w-xl mx-auto py-4 px-4 p-8 rounded-3xl 
-            shadow-inner shadow-blue-500/90 dark:shadow-blue-700/200
+            shadow-inner shadow-blue-950/90 dark:shadow-blue-950/90
             h-94 md:h">
 
                 <!-- Slider main container -->
@@ -75,7 +75,7 @@
                                             class="text-gray-900 dark:text-gray-100 block mb-2">Medio de
                                             transporte:</label>
                                         <select id="transport-type" name="transport_type" required
-                                            class="w-1/2 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            class="w-1/2 p-2 rounded-md border-gray-600 bg-zinc-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <option value="walking">Caminando</option>
                                             <option value="vehicle">Vehículo (incluye público)</option>
@@ -89,7 +89,7 @@
                                             mensualmente:</label>
                                         <input type="number" id="km-traveled" name="km_traveled" required min="0"
                                             placeholder="Ej: 100"
-                                            class="w-1/2 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border  dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            class="w-1/2 p-2 rounded-md border-gray-600 bg-zinc-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border  dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                     </div>
                                 </fieldset>
                         </div>
@@ -108,7 +108,7 @@
                                             hogar:</label>
                                         <input type="number" id="kilowatts-home" name="kilowatts_home" required min="0"
                                             placeholder="Ej: 500"
-                                            class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border  dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border  dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                     </div>
                                     <div class="input-group">
                                         <label for="gas-m3" class="text-gray-900 dark:text-gray-100 block mb-1 mt-1">Gas
@@ -116,14 +116,14 @@
                                             casa (m³):</label>
                                         <input type="number" id="gas-m3" name="gas_m3" required min="0"
                                             placeholder="Ej: 30"
-                                            class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                     </div>
                                     <div class="input-group">
                                         <label for="wood-kg"
                                             class="text-gray-900 dark:text-gray-100 block mb-1 mt-1">Consumo
                                             de leña (kg) - Opcional:</label>
                                         <input type="number" id="wood-kg" name="wood_kg" min="0" placeholder="Ej: 100"
-                                            class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                     </div>
                                 </fieldset>
                             </form>
