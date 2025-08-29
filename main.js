@@ -1,3 +1,4 @@
+
 const themeToggle = document.getElementById('theme-toggle');
 const htmlElement = document.querySelector('html');
 const icon = themeToggle.querySelector('i');
@@ -20,9 +21,8 @@ const setTheme = (theme) => {
 const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 setTheme(savedTheme);
 
-// Event listener para el botón
+
 themeToggle.addEventListener('click', () => {
-    // Si el HTML tiene la clase 'dark', se la quitamos; de lo contrario, se la agregamos.
     if (htmlElement.classList.contains('dark')) {
         setTheme('light');
     } else {
@@ -49,14 +49,10 @@ const swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    //   draggable:'false'
-    // },
 });
 
-// !logica de captura de datos en pantalla usando swiper-js
+
+//!Logica de captura de datos en pantalla usando swiper-js
 
 const userResponses = {};
 
@@ -132,7 +128,7 @@ swiper.on('slideChange', () => {
             }
             break;
     }
-    
+
     // Ejecuta el manejo del formulario para la nueva diapositiva
     handleForm();
 });
