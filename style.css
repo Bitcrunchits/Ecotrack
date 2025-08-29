@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
+}
+.body div{
+  background: linear-gradient(rgba(5,7,12, 0.75));
 }
 
 /* .header-div {
