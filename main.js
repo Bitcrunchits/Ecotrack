@@ -216,9 +216,19 @@ if (calculateButton) {
     calculateButton.addEventListener('click', handleCalculateButton);
 };
 
+//*funcion para resetear los datos al presionar boton de volver
 const handleBackButton = () => {
+    const formTransporte = document.getElementById('gasolina');
+    const formEnergia = document.getElementById('electric');
+    const formAlimentos = document.getElementById('alimentacion');
+
+    if (formTransporte) formTransporte.reset();
+    if (formEnergia) formEnergia.reset();
+    if (formAlimentos) formAlimentos.reset();
+
     swiper.slideTo(1); //Hace volver a pantalla 2
 };
+
 
 if (backButton) {
     backButton.addEventListener('click', handleBackButton)
