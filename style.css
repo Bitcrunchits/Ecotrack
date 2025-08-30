@@ -2,17 +2,26 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
 
+}
+.body div{
+  background: linear-gradient(rgba(5,7,12, 0.75));
+}
+:root {
+  --swiper-navigation-size: 24px; /* Cambia este valor a tu gusto */
+}
+:root {
+  --swiper-navigation-color: #f8f8f8; /* este variable de css viene de  swiper pero la cabiamos desde aca- la buscamos en inspeccion stilos y lueego la modificamos en nuestro css.*/
+}
 /* .header-div {
     border: solid thin red;
 } */
-
 .swiper {
   width: auto;
   height: 100%;
 }
 
-.swiper-slide form{
-  color: #000;
-}
+
+
+
+
