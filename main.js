@@ -3,7 +3,7 @@ const themeToggle = document.getElementById('theme-toggle');
 const htmlElement = document.querySelector('html');
 const icon = themeToggle.querySelector('i');
 
-// Función para cambiar el tema
+// Función para cambiar el tema DARK/LIGTH de tailw
 const setTheme = (theme) => {
     if (theme === 'dark') {
         htmlElement.classList.add('dark');
@@ -30,7 +30,7 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-//initialing SWIPER
+//iniciar SWIPER
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -52,7 +52,7 @@ const swiper = new Swiper('.swiper', {
 });
 //swiper.slideTo(swiper.slides.length - 1, 0); //* esto lo hice para stilar la ultima pantalla y cada vez que refresque queria verla directamente
 
-//!Logica de captura de datos en pantalla usando swiper-js
+//!Logica de CAPTURA DE DATOS en pantalla usando swiper-js
 
 const userResponses = {};
 
@@ -139,17 +139,29 @@ swiper.on('slideChange', () => {
                 console.log("Datos de energía capturados:", userResponses.energia);
             }
             break;
+
+        case 3:
+            const carneConsumida = document.getElementById('carne-consumida');
+            const vegetalesConsumidos = document.getElementById('vegetales-consumidos');
+            if (carneConsumida && vegetalesConsumidos) {
+                userResponses.alimentacion = {
+                    carne: carneConsumida.value,
+                    vegetales: vegetalesConsumidos.value,
+                };
+                console.log("Datos de energía capturados:", userResponses.alimentacion);
+            }
+            break;
     }
     handleForm();
 });
 
 // Constantes de ESTADO "factores de conversión"
 const FACTORES_CO2_ANUAL = {
-    TRANSPORTE_KM_POR_MES: 0.12,  // kg de CO2 por km recorrido en vehículo promedio
+    TRANSPORTE_KM_POR_MES: 0.24,  // kg de CO2 por km recorrido en vehículo promedio
     ELECTRICIDAD_KWH: 0.285,      // kg de CO2 por kWh en Argentina
-    GAS_M3: 2.1,                  // kg de CO2 por m3 de gas en Argentina
-    CARNE_KG: 27,                 // kg de CO2 por kg de carne
-    VEGETALES_KG: 2,              // kg de CO2 por kg de vegetales
+    GAS_M3: 1.8,                  // kg de CO2 por m3 de gas en Argentina
+    CARNE_KG: 14,                 // kg de CO2 por kg de carne
+    VEGETALES_KG: 0.450,              // kg de CO2 por kg de vegetales
     LENA_KG: 1.25,                // kg de CO2 por kg de leña
 };
 // Factor de compensación en árboles
@@ -183,6 +195,7 @@ const handleCalculateButton = () => {
 
     // 3. Sumar para obtener la huella total
     const huellaTotal = huellaTransporte + huellaHogar + huellaAlimentacion;
+    console.log(huellaTotal)
 
     // 4. Calcular los árboles necesarios
     const arboles = Math.ceil((huellaTotal / 1000) * ARBOLES_POR_TONELADA_CO2);
@@ -203,7 +216,7 @@ if (calculateButton) {
     calculateButton.addEventListener('click', handleCalculateButton);
 };
 
-const handleBackButton =() => {
+const handleBackButton = () => {
     swiper.slideTo(1); //Hace volver a pantalla 2
 };
 
