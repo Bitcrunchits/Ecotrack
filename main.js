@@ -56,24 +56,41 @@ const swiper = new Swiper('.swiper', {
 
 const userResponses = {};
 
-// Función universal para validar y capturar datos del formulario actual
+// Referencias a los botones de navegación
+const nextButton = document.querySelector('.swiper-button-next');
+const prevButton = document.querySelector('.swiper-button-prev');
+const calculateButton = document.getElementById('calculate-button');
+
+
+// Función universal para validar y manejar el estado del formulario actual
 function handleForm() {
     const currentSlide = swiper.slides[swiper.realIndex];
     const currentForm = currentSlide.querySelector('form');
-    const nextButton = document.querySelector('.swiper-button-next');
 
-    // Deshabilita el botón de siguiente por defecto
-    nextButton.classList.add('swiper-button-disabled');
+    // Maneja la visibilidad de los botones de navegación y del botón de cálculo
+    if (swiper.realIndex === swiper.slides.length - 1) {
+        nextButton.style.display = 'none';
+        prevButton.style.display = 'none';
+        if (calculateButton) {
+            calculateButton.style.display = 'block';
+        }
+    } else {
+        nextButton.style.display = 'block';
+        prevButton.style.display = 'block';
+        if (calculateButton) {
+            calculateButton.style.display = 'none';
+        }
+    }
 
     if (!currentForm) {
-        // No hay formulario en este slide, habilita el botón de siguiente
         nextButton.classList.remove('swiper-button-disabled');
         return;
     }
 
+    // Deshabilita el botón de siguiente por defecto
+    nextButton.classList.add('swiper-button-disabled');
     const requiredInputs = currentForm.querySelectorAll('[required]');
 
-    // Función para verificar la validez del formulario
     const checkValidity = () => {
         let isFormValid = true;
         requiredInputs.forEach(input => {
@@ -81,24 +98,18 @@ function handleForm() {
                 isFormValid = false;
             }
         });
-
         if (isFormValid) {
             nextButton.classList.remove('swiper-button-disabled');
         } else {
             nextButton.classList.add('swiper-button-disabled');
         }
     };
-
-    // Escucha cambios en los inputs para validar el formulario
     currentForm.addEventListener('input', checkValidity);
-
-    // Llama a la función de validación una vez al cargar el slide
     checkValidity();
 }
 
 // Escuchar el evento de cambio de diapositiva
 swiper.on('slideChange', () => {
-    // Captura los datos del formulario que se acaba de dejar
     const previousSlideIndex = swiper.previousIndex;
 
     switch (previousSlideIndex) {
@@ -128,10 +139,20 @@ swiper.on('slideChange', () => {
             }
             break;
     }
-
-    // Ejecuta el manejo del formulario para la nueva diapositiva
     handleForm();
 });
+
+// Función para manejar el botón de cálculo
+const handleCalculateButton = () => {
+    console.log("Datos finales listos para el cálculo:", userResponses);
+    alert("¡Datos listos para el cálculo! Revisa la consola para ver las respuestas capturadas.");
+    // Aquí es donde iría la lógica para calcular y mostrar la huella de carbono.
+};
+
+// Asignar el evento al botón de cálculo
+if (calculateButton) {
+    calculateButton.addEventListener('click', handleCalculateButton);
+}
 
 // Llama a la función al cargar la página para la primera diapositiva
 document.addEventListener('DOMContentLoaded', () => {
