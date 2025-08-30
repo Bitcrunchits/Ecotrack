@@ -57,9 +57,9 @@
                 </div>
             </header>
             <main>
-                <div class="max-w-xl mx-auto py-4 px-4 p-8 rounded-3xl 
+                <div class="max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto py-2 px-2 p-6 rounded-3xl 
             shadow-inner shadow-blue-950/90 dark:shadow-blue-950/90
-            h-94 md:h">
+            h-96 md:h-[33rem] lg:h-[33rem]">
                     <!-- Slider main container -->
                     <div class="swiper">
                         <!-- Additional required wrapper -->
@@ -67,17 +67,28 @@
 
                             <!-- Slides -->
                             <div class="swiper-slide">
+                                <div class="text-gray-200 dark:text-gray-100 font-bold">
+                                    <h1 class="dark:text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-shadow-lg/150">
+                                        Bienvenido</h1>
+                                </div>
+                                <div class=" text-white dark:text-gray-100 text-base md:text-xl lg:text-2xl font-bold py-2 text-shadow-lg/150">
+                                    <p>Conoce tu huella de carbono. Descubre tu contribución al calentamiento global
+                                        y cómo puedes compensarla plantando árboles.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
                                 <form action="" id="gasolina">
                                     <fieldset class="form-step space-y-4">
                                         <legend
-                                            class="step-title text-gray-200 dark:text-gray-100 font-bold mb-4 text-2xl sm:text-3xl">
+                                            class="step-title text-white dark:text-gray-100 font-bold mb-4 text-2xl sm:text-3xl text-shadow-lg/150">
                                             Transporte 🚗 </legend>
                                         <div class="input-group sm:mb-4 md:mb5 lg:mb8 xl:mb12">
                                             <label for="transport-type"
-                                                class="text-gray-200 dark:text-gray-100 block mb-2">Medio de
+                                                class="text-white font-bold dark:text-gray-100 block mb-2">Medio de
                                                 transporte:</label>
                                             <select id="transport-type" name="transport_type" required
-                                                class="w-1/2 p-2 rounded-md border-gray-600 bg-zinc-300 dark:bg-gray-800 text-gray-700 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                class="w-1/2 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-700 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                                 <option value="" disabled selected>Selecciona una opción</option>
                                                 <option value="walking">Caminando</option>
                                                 <option value="vehicle">Vehículo (incluye público)</option>
@@ -86,11 +97,11 @@
                                         </div>
                                         <div class="input-group space-y-4">
                                             <label for="km-traveled"
-                                                class="text-gray-200 dark:text-gray-100 block">Kilómetros
+                                                class="text-white font-bold dark:text-gray-100 block">Kilómetros
                                                 mensuales:</label>
                                             <input type="number" id="km-traveled" name="km_traveled" required min="0"
                                                 placeholder="Ej: 100"
-                                                class="w-1/2 p-2 rounded-md border-gray-600 bg-zinc-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border  dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                class="w-1/2 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border  dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                         </div>
                                     </fieldset>
                             </div>
@@ -98,33 +109,33 @@
                                 <form action="" id="electric">
                                     <fieldset class="form-step">
                                         <legend
-                                            class="step-title text-gray-200 dark:text-gray-100 font-bold mb-2 text-2xl sm:text-3xl">
+                                            class="step-title text-white  dark:text-gray-100 font-bold mb-2 text-2xl sm:text-3xl text-shadow-lg/150">
                                             Consumo de Energía ⚡
                                         </legend>
                                         <div class="input-group">
                                             <label for="kilowatts-home"
-                                                class="text-gray-200 dark:text-gray-100 block mb-2">Kilowatts en el
+                                                class="text-white font-bold dark:text-gray-100 block mb-2">Kilowatts en el
                                                 hogar:</label>
                                             <input type="number" id="kilowatts-home" name="kilowatts_home" required
                                                 min="0" placeholder="Ej: 500"
-                                                class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border  dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border  dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                         </div>
                                         <div class="input-group">
                                             <label for="gas-m3"
-                                                class="text-gray-200 dark:text-gray-100 block mb-1 mt-1">Gas
+                                                class="text-white font-bold dark:text-gray-100 block mb-1 mt-1">Gas
                                                 en
                                                 casa (m³):</label>
                                             <input type="number" id="gas-m3" name="gas_m3" required min="0"
                                                 placeholder="Ej: 30"
-                                                class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                         </div>
                                         <div class="input-group">
                                             <label for="wood-kg"
-                                                class="text-gray-200 dark:text-gray-100 block mb-1 mt-1">Consumo
+                                                class="text-white font-bold dark:text-gray-100 block mb-1 mt-1">Consumo
                                                 de leña (kg) - Opcional:</label>
                                             <input type="number" id="wood-kg" name="wood_kg" min="0"
                                                 placeholder="Ej: 100"
-                                                class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-300 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                class="w-2/5 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                         </div>
                                     </fieldset>
                                 </form>
@@ -133,69 +144,65 @@
                                 <form id="alimentacion">
                                     <fieldset class="form-step space-y-4">
                                         <legend
-                                            class="step-title text-gray-900 dark:text-gray-100 font-bold mb-4 text-2xl sm:text-3xl">
+                                            class="step-title text-white dark:text-gray-100 font-bold mb-4 text-2xl sm:text-3xl text-shadow-lg/150">
                                             Alimentación 🍽️
                                         </legend>
                                         <div class="input-group space-y-4">
                                             <label for="carne-consumida"
-                                                class="text-gray-900 dark:text-gray-100 block">Consumo de carnes
+                                                class="text-white font-bold dark:text-gray-100 block">Consumo de carnes
                                                 (Kg/mes):</label>
                                             <input type="number" id="carne-consumida" name="carne" required min="0"
                                                 placeholder="Ej: 10"
-                                                class="w-1/2 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                class="w-1/2 p-2 rounded-md bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                         </div>
                                         <div class="input-group space-y-4">
                                             <label for="vegetales-consumidos"
-                                                class="text-gray-900 dark:text-gray-100 block">Consumo de vegetales
+                                                class="text-white font-bold dark:text-gray-100 block">Consumo de vegetales
                                                 (Kg/mes):</label>
                                             <input type="number" id="vegetales-consumidos" name="vegetales" required
                                                 min="0" placeholder="Ej: 15"
-                                                class="w-1/2 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                class="w-1/2 p-2 rounded-md bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                         </div>
-                                        <div class="pt-4">
-                                            <button type="button" id="calcular-btn"
-                                                class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                                                Calcular huella de carbono
-                                            </button>
-                                        </div>
+
                                     </fieldset>
                                 </form>
                             </div>
                             <div class="swiper-slide">
                                 <form action="">
-                                    <div class="space-y-6 text-left px-4">
-                                        <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Resultado de tu
-                                            huella
-                                            de carbono 🌍</h2>
-                                        <p class="text-lg text-gray-800 dark:text-gray-200">Huella anual estimada: <span
-                                                id="huella-total" class="font-bold text-blue-600 dark:text-blue-400">--
+                                    <div class="space-y-3 lg:space-y-5 px-4">
+                                        <h2 class="md:pt-6 lg:pt-8 text-center text-2xl font-bold text-white dark:text-gray-100 text-shadow-lg/150 md:text-4xl lg:text-5xl">
+                                            Resultados 🌍</h2>
+                                        <p class="text-lg text-white font-bold dark:text-gray-200 text-shadow-lg/100 md:text-3xl lg:text-3xl">Huella anual
+                                            estimada: <span id="huella-total"
+                                                class="font-bold text-cyan-200">--
                                                 kg
                                                 CO₂</span></p>
-                                        <ul class="list-disc pl-6 text-gray-800 dark:text-gray-200">
-                                            <li>Transporte: <span id="huella-transporte">-- kg CO₂</span></li>
-                                            <li>Hogar: <span id="huella-hogar">-- kg CO₂</span></li>
-                                            <li>Alimentación: <span id="huella-alimentacion">-- kg CO₂</span></li>
+                                        <ul class="text-left list-disc pl-6 text-white font-bold dark:text-gray-200 text-shadow-lg/100 text-lg md:text-3xl lg:text-3xl">
+                                            <li>Transporte: <span id="huella-transporte" class="text-cyan-200">-- kg CO₂</span></li>
+                                            <li>Hogar: <span id="huella-hogar" class="text-cyan-200">-- kg CO₂</span></li>
+                                            <li>Alimentación: <span id="huella-alimentacion" class="text-cyan-200">-- kg CO₂</span></li>
                                         </ul>
-                                        <p class="mt-4 text-lg text-green-700 dark:text-green-400">Compensación
+                                        <p class="text-left font-bold mt-4 text-lg text-cyan-200 dark:text-cyan-100 text-shadow-lg/100 md:text-3xl lg:text-3xl">
+                                            Compensación
                                             sugerida:
-                                            <span id="arboles-compensacion" class="font-bold">-- árboles</span> 🌳
+                                            <span id="arboles-compensacion">-- árboles</span> 🌳
                                         </p>
+                                        <div class=" flex flex-col items-center md:pt-2 text-center">
+                                            <button type="button" id="calculate-button"
+                                                class="px-2 py-2 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition-colors mb-3">
+                                                Calcular mi Huella
+                                            </button>
+                                            <button type="button" id="back-button"
+                                                class="px-2 py-2 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-500 transition-colors">
+                                                volver
+                                            </button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
 
 
-                            <div class="swiper-slide">
-                                <div class="text-gray-900 dark:text-gray-100 font-bold">
-                                    <h1 class="text-blue-800 dark:text-blue-400 text-3xl sm:text-4xl md:text-5xl">
-                                        Bienvenido</h1>
-                                </div>
-                                <div class="text-blue-800 dark:text-blue-400 text-sm sm:text-base md:text-lg py-2">
-                                    <p>Conoce tu huella de carbono. Descubre tu contribución al calentamiento global
-                                        y cómo puedes compensarla plantando árboles.
-                                    </p>
-                                </div>
-                            </div>
+
 
                         </div>
                         <!-- If we need pagination -->

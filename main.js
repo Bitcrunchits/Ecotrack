@@ -50,7 +50,7 @@ const swiper = new Swiper('.swiper', {
     },
 
 });
-
+swiper.slideTo(swiper.slides.length - 1, 0); // Va al último slide sin animación
 
 //!Logica de captura de datos en pantalla usando swiper-js
 
@@ -60,6 +60,7 @@ const userResponses = {};
 const nextButton = document.querySelector('.swiper-button-next');
 const prevButton = document.querySelector('.swiper-button-prev');
 const calculateButton = document.getElementById('calculate-button');
+const backButton = document.getElementById('back-button');
 
 
 // Función universal para validar y manejar el estado del formulario actual
@@ -142,17 +143,74 @@ swiper.on('slideChange', () => {
     handleForm();
 });
 
+// Constantes de ESTADO "factores de conversión"
+const FACTORES_CO2_ANUAL = {
+    TRANSPORTE_KM_POR_MES: 0.12,  // kg de CO2 por km recorrido en vehículo promedio
+    ELECTRICIDAD_KWH: 0.285,      // kg de CO2 por kWh en Argentina
+    GAS_M3: 2.1,                  // kg de CO2 por m3 de gas en Argentina
+    CARNE_KG: 27,                 // kg de CO2 por kg de carne
+    VEGETALES_KG: 2,              // kg de CO2 por kg de vegetales
+    LENA_KG: 1.25,                // kg de CO2 por kg de leña
+};
+// Factor de compensación en árboles
+const ARBOLES_POR_TONELADA_CO2 = 5; // Un árbol promedio compensa 200 kg de CO2 al año
+
+
+//! LOGICA DE CALCULO 
+
 // Función para manejar el botón de cálculo
 const handleCalculateButton = () => {
-    console.log("Datos finales listos para el cálculo:", userResponses);
-    alert("¡Datos listos para el cálculo! Revisa la consola para ver las respuestas capturadas.");
-    // Aquí es donde iría la lógica para calcular y mostrar la huella de carbono.
+    // 1. Obtener los datos capturados
+    const datosTransporte = userResponses.transporte;
+    const datosEnergia = userResponses.energia;
+    const datosAlimentacion = userResponses.alimentacion;
+
+    // 2. Calcular la huella de carbono de cada sección
+    const huellaTransporte = datosTransporte
+        ? (datosTransporte.tipo === 'vehicle' ? datosTransporte.km * FACTORES_CO2_ANUAL.TRANSPORTE_KM_POR_MES * 12 : 0)
+        : 0;
+
+    const huellaHogar = datosEnergia
+        ? (datosEnergia.electricidad * FACTORES_CO2_ANUAL.ELECTRICIDAD_KWH * 12) +
+        (datosEnergia.gas * FACTORES_CO2_ANUAL.GAS_M3 * 12) +
+        (datosEnergia.lena * FACTORES_CO2_ANUAL.LENA_KG * 12)
+        : 0;
+
+    const huellaAlimentacion = datosAlimentacion
+        ? (datosAlimentacion.carne * FACTORES_CO2_ANUAL.CARNE_KG * 12) +
+        (datosAlimentacion.vegetales * FACTORES_CO2_ANUAL.VEGETALES_KG * 12)
+        : 0;
+
+    // 3. Sumar para obtener la huella total
+    const huellaTotal = huellaTransporte + huellaHogar + huellaAlimentacion;
+
+    // 4. Calcular los árboles necesarios
+    const arboles = Math.ceil((huellaTotal / 1000) * ARBOLES_POR_TONELADA_CO2);
+
+    // 5. Mostrar los resultados en la interfaz
+    document.getElementById('huella-transporte').textContent = `${huellaTransporte.toFixed(2)} kg CO₂`;
+    document.getElementById('huella-hogar').textContent = `${huellaHogar.toFixed(2)} kg CO₂`;
+    document.getElementById('huella-alimentacion').textContent = `${huellaAlimentacion.toFixed(2)} kg CO₂`;
+    document.getElementById('huella-total').textContent = `${huellaTotal.toFixed(2)} kg CO₂`;
+    document.getElementById('arboles-compensacion').textContent = `${arboles} árboles`;
+
+    // Opcional: Desplazarse al slide de resultados
+    swiper.slideTo(swiper.slides.length - 1);
 };
 
-// Asignar el evento al botón de cálculo
+// Asignar el evento al botón de cálculo y volver a inicio
 if (calculateButton) {
     calculateButton.addEventListener('click', handleCalculateButton);
-}
+};
+
+const handleBackButton =() => {
+    swiper.slideTo(1); //Hace volver a pantalla 2
+};
+
+if (backButton) {
+    backButton.addEventListener('click', handleBackButton)
+};
+
 
 // Llama a la función al cargar la página para la primera diapositiva
 document.addEventListener('DOMContentLoaded', () => {
