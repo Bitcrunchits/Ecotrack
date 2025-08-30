@@ -50,7 +50,7 @@ const swiper = new Swiper('.swiper', {
     },
 
 });
-swiper.slideTo(swiper.slides.length - 1, 0); // Va al último slide sin animación
+//swiper.slideTo(swiper.slides.length - 1, 0); //* esto lo hice para stilar la ultima pantalla y cada vez que refresque queria verla directamente
 
 //!Logica de captura de datos en pantalla usando swiper-js
 

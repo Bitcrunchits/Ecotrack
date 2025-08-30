@@ -68,10 +68,12 @@
                             <!-- Slides -->
                             <div class="swiper-slide">
                                 <div class="text-gray-200 dark:text-gray-100 font-bold">
-                                    <h1 class="dark:text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-shadow-lg/150">
+                                    <h1
+                                        class="dark:text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-shadow-lg/150">
                                         Bienvenido</h1>
                                 </div>
-                                <div class=" text-white dark:text-gray-100 text-base md:text-xl lg:text-2xl font-bold py-2 text-shadow-lg/150">
+                                <div
+                                    class=" text-white dark:text-gray-100 text-base md:text-xl lg:text-2xl font-bold py-2 text-shadow-lg/150">
                                     <p>Conoce tu huella de carbono. Descubre tu contribución al calentamiento global
                                         y cómo puedes compensarla plantando árboles.
                                     </p>
@@ -114,7 +116,8 @@
                                         </legend>
                                         <div class="input-group">
                                             <label for="kilowatts-home"
-                                                class="text-white font-bold dark:text-gray-100 block mb-2">Kilowatts en el
+                                                class="text-white font-bold dark:text-gray-100 block mb-2">Kilowatts en
+                                                el
                                                 hogar:</label>
                                             <input type="number" id="kilowatts-home" name="kilowatts_home" required
                                                 min="0" placeholder="Ej: 500"
@@ -157,7 +160,8 @@
                                         </div>
                                         <div class="input-group space-y-4">
                                             <label for="vegetales-consumidos"
-                                                class="text-white font-bold dark:text-gray-100 block">Consumo de vegetales
+                                                class="text-white font-bold dark:text-gray-100 block">Consumo de
+                                                vegetales
                                                 (Kg/mes):</label>
                                             <input type="number" id="vegetales-consumidos" name="vegetales" required
                                                 min="0" placeholder="Ej: 15"
@@ -170,30 +174,45 @@
                             <div class="swiper-slide">
                                 <form action="">
                                     <div class="space-y-3 lg:space-y-5 px-4">
-                                        <h2 class="md:pt-6 lg:pt-8 text-center text-2xl font-bold text-white dark:text-gray-100 text-shadow-lg/150 md:text-4xl lg:text-5xl">
+                                        <h2
+                                            class="md:pt-6 lg:pt-8 text-center text-2xl font-bold text-white dark:text-gray-100 text-shadow-lg/150 md:text-4xl lg:text-5xl">
                                             Resultados 🌍</h2>
-                                        <p class="text-lg text-white font-bold dark:text-gray-200 text-shadow-lg/100 md:text-3xl lg:text-3xl">Huella anual
-                                            estimada: <span id="huella-total"
-                                                class="font-bold text-cyan-200">--
+                                        <p
+                                            class="text-lg text-white font-bold dark:text-gray-200 text-shadow-lg/100 md:text-3xl lg:text-3xl">
+                                            Huella anual
+                                            estimada: <span id="huella-total" class="font-bold text-cyan-200">--
                                                 kg
                                                 CO₂</span></p>
-                                        <ul class="text-left list-disc pl-6 text-white font-bold dark:text-gray-200 text-shadow-lg/100 text-lg md:text-3xl lg:text-3xl">
-                                            <li>Transporte: <span id="huella-transporte" class="text-cyan-200">-- kg CO₂</span></li>
-                                            <li>Hogar: <span id="huella-hogar" class="text-cyan-200">-- kg CO₂</span></li>
-                                            <li>Alimentación: <span id="huella-alimentacion" class="text-cyan-200">-- kg CO₂</span></li>
+                                        <ul
+                                            class="text-left list-disc pl-6 text-white font-bold dark:text-gray-200 text-shadow-lg/100 text-lg md:text-3xl lg:text-3xl">
+                                            <li>Transporte: <span id="huella-transporte" class="text-cyan-200">-- kg
+                                                    CO₂</span></li>
+                                            <li>Hogar: <span id="huella-hogar" class="text-cyan-200">-- kg CO₂</span>
+                                            </li>
+                                            <li>Alimentación: <span id="huella-alimentacion" class="text-cyan-200">-- kg
+                                                    CO₂</span></li>
                                         </ul>
-                                        <p class="text-left font-bold mt-4 text-lg text-cyan-200 dark:text-cyan-100 text-shadow-lg/100 md:text-3xl lg:text-3xl">
+                                        <p
+                                            class="text-left font-bold mt-4 text-lg text-cyan-200 dark:text-cyan-100 text-shadow-lg/100 md:text-3xl lg:text-3xl">
                                             Compensación
                                             sugerida:
                                             <span id="arboles-compensacion">-- árboles</span> 🌳
                                         </p>
                                         <div class=" flex flex-col items-center md:pt-2 text-center">
-                                            <button type="button" id="calculate-button"
-                                                class="px-2 py-2 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 transition-colors mb-3">
+                                            <button type="button" id="calculate-button" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br 
+                                                focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg 
+                                                text-sm px-5 py-2.5 
+                                                md:text-base md:px-6 md:py-3 
+                                                lg:text-lg lg:px-8 lg:py-4 
+                                                text-center me-2 mb-2">
                                                 Calcular mi Huella
                                             </button>
-                                            <button type="button" id="back-button"
-                                                class="px-2 py-2 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-500 transition-colors">
+                                            <button type="button" id="back-button" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br 
+                                                focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg 
+                                                text-sm px-5 py-2.5 
+                                                md:text-base md:px-6 md:py-3 
+                                                lg:text-lg lg:px-8 lg:py-4 
+                                                text-center me-2 mb-2">
                                                 volver
                                             </button>
                                         </div>
