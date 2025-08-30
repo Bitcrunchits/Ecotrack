@@ -12,7 +12,7 @@
 }
 
 :root {
-  --swiper-navigation-color: #f8f8f8; /* este variable de css viene de  swiper pero la cabiamos desde aca- la buscamos en inspeccion stilos y lueego la modificamos en nuestro css.*/
+  --swiper-navigation-color: #fcf7f7; /* este variable de css viene de  swiper pero la cabiamos desde aca- la buscamos en inspeccion stilos y lueego la modificamos en nuestro css.*/
 }
 
 /* .header-div {
