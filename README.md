@@ -1,5 +1,6 @@
 # ECOTRACK
-## Introducción
+## Introducción 
+## Descripcion de APP
 La huella de carbono es un indicador ambiental que mide la cantidad total de gases de efecto invernadero (GEI) emitidos de forma directa o indirecta por **actividades humanas:**
 1. Consumo de energía.
 1. Transporte.
