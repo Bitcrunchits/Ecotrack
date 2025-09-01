@@ -10,7 +10,7 @@ Se expresa en toneladas de CO₂ equivalente y cuantifica el impacto de una pers
 ## Nuestra App
 <img src="./assets/ecotrack1.jpg" alt="Captura de pantalla de la app" width="30%" >
 
-ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que esta diseñada para calcular la huella de carbono personal anual (o la de tu hogar). Esto quiere decir la cantidad de Kg de CO₂ (equivalente) que produduce tu actividad o la de tu hogar a lo largo de un año. También brinda información aproximada de cuantos arboles son necesarios plantar para compensar la contaminación producida.
+ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que esta diseñada para calcular la huella de carbono personal anual (o la de tu hogar). Esto quiere decir la cantidad de Kg de CO₂ (equivalente) que produduce tu actividad o la de tu hogar a lo largo de un año. También brinda información aproximada de cuantos arboles son necesarios plantar para compensar la contaminación producida CO².
 
 ## Calcula la cantidad de CO² que liberan en tus actividades en un año
 
@@ -58,20 +58,43 @@ En la pantalla **Alimentación** debes:
 
 <img src="./assets/ecotrack7.jpg" alt="Captura de pantalla de la app" width="50%">
 
-<span style="color: red;">En construcción </span>
+**<div><span style="color: red;">En Revisión </span></div>**
+1. Ingresar el número de **Kg** de carne consumida en el mes. Como en los ejemplos anteriores, si tu hogar esta compuesto de 4 personas debes dividir los Kg totales mensuales de carne consumida por cuatro. Por ejemplo, si se consumen 40 kg mensuales en tu hogar, deberas ingresar 10 kg de carne.
+1. Ingresar el número de **Kg** de verdura consumida en el mes. Al igual que en los ejemplos anteriores, si tu hogar esta compuesto de 4 personas debes dividir los Kg totales mensuales de verdura consumida por cuatro. Por ejemplo, si se consumen 60 kg mensuales en tu hogar, deberas ingresar 15 kg de carne.
 
-## Tecnología Utilizada
-Para realizar esta app se utilizo:
-* HTML.
-* Vanilla Javascript.
-* Framework Tailwind CSS.
-* Libreria Swiper.
+Pantalla de **Resultados**:
+**<div><span style="color: red;">En Construcción </span></div>**
 
-## Pasos técnicos de instalación/ejecución.
-<span style="color: red;">En construcción </span>
+## Tecnologías y Librerías 💻
+* **HTML5, CSS3 y JavaScript (Vanilla JS):** El corazón del proyecto, usado para la estructura, el estilo y la lógica principal.
+* **Tailwind CSS:** Framework CSS utility-first para un desarrollo de diseño rápido y responsivo.
+* **Swiper.js:** Librería de carrusel utilizada para crear la interfaz de usuario de múltiples pasos, lo que mejora la experiencia del usuario.
+* **Boxicons:** Librería de íconos que añade elementos visuales a la interfaz, como el botón de modo oscuro.
+## Documentación de Referencia:
+* [Swiper.js Docs](https://swiperjs.com/get-started)
+* [Tailwind CSS Docs](https://tailwindcss.com/docs)
+* [Boxicons Docs](https://boxicons.com/)
+
+
+## Instalación y Ejecución ▶️
+## <div><span style="color: red;">En Revisión </span></div>
+Este proyecto es una aplicación web estática, por lo que su instalación y ejecución son muy sencillas.
+1. Clonar el repositorio.
+
+    Bash:
+    git clone https://github.com/Bitcrunchits/Ecotrack.git
+
+1. Navegar al directorio del proyecto.
+
+    Bash:
+    cd ecotrack
+
+
+1. Abrir el archivo: Simplemente abre el archivo index.html en tu navegador web preferido. No se necesita ningún servidor local, ya que todo el procesamiento se realiza en el navegador con JavaScript.
+
 
 ## Código Importante
-<span style="color: red;">En construcción </span>
+## <div><span style="color: red;">En Revisión </span></div>
 
 ### Función para cambiar el tema DARK/LIGTH de tailwind CSS
 ``` javascript
@@ -88,5 +111,6 @@ const setTheme = (theme) => {
     localStorage.setItem('theme', theme);
 };
 ```
-
-
+## Licencia 📜
+<small>Este software está bajo la licencia MIT. Esto significa que puedes usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del software. La única condición es que se debe incluir el aviso de copyright y la licencia en todas las copias o partes sustanciales del software.
+ © 2025 ITS Cipolletti. Todos los derechos reservados.</small>
