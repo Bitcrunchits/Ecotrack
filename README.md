@@ -9,6 +9,7 @@ Se expresa en toneladas de CO₂ equivalente y cuantifica el impacto de una pers
 
 ## Nuestra App
 <img src="./assets/ecotrack1.jpg" alt="Captura de pantalla de la app" width="30%" >
+
 ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que esta diseñada para calcular la huella de carbono personal anual (o la de tu hogar). Esto quiere decir la cantidad de Kg de CO₂ (equivalente) que produduce tu actividad o la de tu hogar a lo largo de un año. También brinda información aproximada de cuantos arboles son necesarios plantar para compensar la contaminación producida.
 
 ## Calcula la cantidad de CO² que liberan en tus actividades en un año
@@ -25,7 +26,9 @@ En la pantalla **Transporte** debes:
 
 
 En la pantalla **Consumo de energía** debes:
+
 <img src="./assets/ecotrack5.jpg" alt="Captura de pantalla de la app" width="50%">
+
 1. Ingresar el número de **kWh** que consumes por mes en el campo **Kilowatts en el hogar**. 
 
 #### ¿Como obtienes este dato?
@@ -40,18 +43,21 @@ Por lo que tu consumo mensual es de 50 kWh.
 
 2. Ingresar el número de **m³**  de gas que consumes por mes en el campo **Gas en casa**. 
 #### ¿Como obtienes este dato?
-Recuerda que en Argentina los datos **m³** de gas se muestran como 6 grupos bimestrales de consumo. De manera que si en tu boleta figura: 
+Recuerda que en Argentina los datos de **m³** de gas se muestran como 6 grupos bimestrales de consumo. De manera que si en tu boleta figura: 
 
-<img src="./assets/gasaek.jpg" alt="Captura gas anual" width="50%"> 
+<img src="./assets/m³ de gas consumido por bimestre.png" alt="Captura gas anual" width="60%"> 
 
-Segun esta boleta debes sumar 933 m³+ 222 m³ + 108 m³ + 140 m³ + 548 m³ + 1345 m³ y dividirlo en 12 meses.
-* (933 m³ + 222 m³ + 108 m³ + 140 m³ + 548 m³ + 1345 m³)/12 = 274 m³ mensuales en el hogar. 
-Pero si en tu hogar viven 4 personas seria 274 m³ dividido 4:
-* 274/4 = **68 m³ mensuales por persona.**
+Segun esta boleta debes sumar 934 m³+ 222 m³ + 110 m³ + 144 m³ + 553 m³ + 1349 m³ y dividirlo en 12 meses.
+* (934 m³ + 222 m³ + 110 m³ + 144 m³ + 553 m³ + 1349 m³)/12 = 276 m³ mensuales en el hogar. 
+Pero si en tu hogar viven 4 personas seria 276 m³ dividido 4:
+* 276/4 = **69 m³ mensuales por persona.**
 3. Ingresar el número de **Kg** de consumo de leña (opcional).
 Un calculo aproximado seria: Si una familia de 4 personas que come un asado por mes, consume  8 Kg de leña o carbón en el fuego , la persona debe ingresar 2 kg de leña por mes.
 
 En la pantalla **Alimentación** debes:
+
+<img src="./assets/ecotrack7.jpg" alt="Captura de pantalla de la app" width="50%">
+
 <span style="color: red;">En construcción </span>
 
 ## Tecnología Utilizada
@@ -68,7 +74,7 @@ Para realizar esta app se utilizo:
 <span style="color: red;">En construcción </span>
 
 ### Función para cambiar el tema DARK/LIGTH de tailwind CSS
-```
+``` javascript
 const setTheme = (theme) => {
     if (theme === 'dark') {
         htmlElement.classList.add('dark');
