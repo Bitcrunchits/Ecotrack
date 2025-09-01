@@ -10,7 +10,7 @@ Se expresa en toneladas de CO₂ equivalente y cuantifica el impacto de una pers
 ## Nuestra App
 <img src="./assets/ecotrack1.jpg" alt="Captura de pantalla de la app" width="30%" >
 
-ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que esta diseñada para calcular la huella de carbono personal anual (o la de tu hogar). Esto quiere decir la cantidad de Kg de CO₂ (equivalente) que produduce tu actividad o la de tu hogar a lo largo de un año. También brinda información aproximada de cuantos arboles son necesarios plantar para compensar la contaminación producida CO².
+ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que esta diseñada para calcular la huella de carbono personal anual (o la de tu hogar). Esto quiere decir la cantidad de Kg de CO₂ (equivalente) que produduce tu actividad o la de tu hogar a lo largo de un año. También brinda información aproximada de cuantos arboles son necesarios plantar para compensar la contaminación producida CO₂.
 
 ## Calcula la cantidad de CO² que liberan en tus actividades en un año
 
@@ -93,7 +93,7 @@ Este proyecto es una aplicación web estática, por lo que su instalación y eje
 1. Abrir el archivo: Simplemente abre el archivo index.html en tu navegador web preferido. No se necesita ningún servidor local, ya que todo el procesamiento se realiza en el navegador con JavaScript.
 
 
-## Código Importante
+## Fragmentos de Código Clave 🧩
 ## <div><span style="color: red;">En Revisión </span></div>
 
 ### Función para cambiar el tema DARK/LIGTH de tailwind CSS
@@ -111,6 +111,110 @@ const setTheme = (theme) => {
     localStorage.setItem('theme', theme);
 };
 ```
+### Factores de Conversión
+Esta sección define los factores de emisión de CO₂​ para cada categoría. El código utiliza estos valores para calcular la huella de carbono a partir de los datos ingresados por el usuario.
+```javascript
+const FACTORES_CO2_ANUAL = {
+    TRANSPORTE_KM_POR_MES: 0.12,  // kg de CO2 por km recorrido en vehículo
+    ELECTRICIDAD_KWH: 0.285,      // kg de CO2 por kWh
+    GAS_M3: 2.1,                  // kg de CO2 por m3 de gas
+    CARNE_KG: 27,                 // kg de CO2 por kg de carne
+    VEGETALES_KG: 2,              // kg de CO2 por kg de vegetales
+    LENA_KG: 1.25,                // kg de CO2 por kg de leña
+};
+```
+### Lógica de Cálculo
+La función **handleCalculateButton** toma los datos mensuales del usuario y los multiplica por 12 para obtener un valor anual. Luego, usa los factores de conversión para calcular la huella de carbono total.
+
+```javascript
+// Función para manejar el botón de cálculo
+const handleCalculateButton = () => {
+    // 1. Obtener los datos capturados
+    const datosTransporte = userResponses.transporte;
+    const datosEnergia = userResponses.energia;
+    const datosAlimentacion = userResponses.alimentacion;
+
+
+    // 2. Calcular la huella de carbono de cada sección
+    const huellaTransporte = datosTransporte
+        ? (datosTransporte.tipo === 'vehicle' ? datosTransporte.km * FACTORES_CO2_ANUAL.TRANSPORTE_KM_POR_MES * 12 : 0)
+        : 0;
+
+
+    const huellaHogar = datosEnergia
+        ? (datosEnergia.electricidad * FACTORES_CO2_ANUAL.ELECTRICIDAD_KWH * 12) +
+        (datosEnergia.gas * FACTORES_CO2_ANUAL.GAS_M3 * 12) +
+        (datosEnergia.lena * FACTORES_CO2_ANUAL.LENA_KG * 12)
+        : 0;
+
+
+    const huellaAlimentacion = datosAlimentacion
+        ? (datosAlimentacion.carne * FACTORES_CO2_ANUAL.CARNE_KG * 12) +
+        (datosAlimentacion.vegetales * FACTORES_CO2_ANUAL.VEGETALES_KG * 12)
+        : 0;
+
+
+    // 3. Sumar para obtener la huella total
+    const huellaTotal = huellaTransporte + huellaHogar + huellaAlimentacion;
+    console.log(huellaTotal)
+
+
+    // 4. Calcular los árboles necesarios
+    const arboles = Math.ceil((huellaTotal / 1000) * ARBOLES_POR_TONELADA_CO2);
+```
+### Captura y almacenamiento de información de un usuario (swiper).
+Este código actúa como un sistema de seguimiento de un formulario multipaso, recolectando y guardando de manera organizada la información que el usuario ingresa en cada etapa antes de pasar a la siguiente diapositiva utilizando la estructura de control switch case.
+
+```javascript
+// Escuchar el evento de cambio de diapositiva
+swiper.on('slideChange', () => {
+    const previousSlideIndex = swiper.previousIndex;
+
+    switch (previousSlideIndex) {
+        case 1:
+            const transportType = document.getElementById('transport-type');
+            const kmTraveled = document.getElementById('km-traveled');
+            if (transportType && kmTraveled) {
+                userResponses.transporte = {
+                    tipo: transportType.value,
+                    km: kmTraveled.value
+                };
+                console.log("Datos de transporte capturados:", userResponses.transporte);
+            }
+            break;
+
+
+        case 2:
+            const kilowattsHome = document.getElementById('kilowatts-home');
+            const gasM3 = document.getElementById('gas-m3');
+            const woodKg = document.getElementById('wood-kg');
+            if (kilowattsHome && gasM3) {
+                userResponses.energia = {
+                    electricidad: kilowattsHome.value,
+                    gas: gasM3.value,
+                    lena: woodKg ? woodKg.value : ''
+                };
+                console.log("Datos de energía capturados:", userResponses.energia);
+            }
+            break;
+
+
+        case 3:
+            const carneConsumida = document.getElementById('carne-consumida');
+            const vegetalesConsumidos = document.getElementById('vegetales-consumidos');
+            if (carneConsumida && vegetalesConsumidos) {
+                userResponses.alimentacion = {
+                    carne: carneConsumida.value,
+                    vegetales: vegetalesConsumidos.value,
+                };
+                console.log("Datos de energía capturados:", userResponses.alimentacion);
+            }
+            break;
+    }
+    handleForm();
+});
+```
+
 ## Licencia 📜
 <small>Este software está bajo la licencia MIT. Esto significa que puedes usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del software. La única condición es que se debe incluir el aviso de copyright y la licencia en todas las copias o partes sustanciales del software.
  © 2025 ITS Cipolletti. Todos los derechos reservados.</small>
