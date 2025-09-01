@@ -8,16 +8,16 @@ La huella de carbono es un indicador ambiental que mide la cantidad total de gas
 Se expresa en toneladas de CO₂ equivalente y cuantifica el impacto de una persona, hogar, empresa, producto o país en el cambio climático. 
 
 ## Nuestra App
-<img src="./assets/ecotrack1.jpg" alt="Captura de pantalla de la app" width="30%" style="float: right; margin-left: 15px;">
+<img src="./assets/ecotrack1.jpg" alt="Captura de pantalla de la app" width="30%" >
 ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que esta diseñada para calcular la huella de carbono personal anual (o la de tu hogar). Esto quiere decir la cantidad de Kg de CO₂ (equivalente) que produduce tu actividad o la de tu hogar a lo largo de un año. También brinda información aproximada de cuantos arboles son necesarios plantar para compensar la contaminación producida.
 
 ## Calcula la cantidad de CO² que liberan en tus actividades en un año
 
-<img src="./assets/ecotrack3.jpg" alt="Captura de pantalla de la app" width="50%" style="float: right; margin-left: 15px;">
-
 ### Pantallas de ingreso de datos
 
 En la pantalla **Transporte** debes:
+
+<img src="./assets/ecotrack3.jpg" alt="Captura de pantalla de la app" width="50%">
 
 1. Seleccionar tu medio de transporte habitual. 
 1. Ingresar los kilometros mensuales aproximados que recorres. 
@@ -25,7 +25,7 @@ En la pantalla **Transporte** debes:
 
 
 En la pantalla **Consumo de energía** debes:
-<img src="./assets/ecotrack5.jpg" alt="Captura de pantalla de la app" width="50%" style="float: right; margin-left: 15px;">
+<img src="./assets/ecotrack5.jpg" alt="Captura de pantalla de la app" width="50%">
 1. Ingresar el número de **kWh** que consumes por mes en el campo **Kilowatts en el hogar**. 
 
 #### ¿Como obtienes este dato?
