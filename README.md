@@ -113,7 +113,8 @@ const setTheme = (theme) => {
 };
 ```
 ### Factores de Conversión
-Esta sección define los factores de emisión de CO₂​ para cada categoría. El código utiliza estos valores para calcular la huella de carbono a partir de los datos ingresados por el usuario.
+Esta sección define los factores de emisión de CO₂​ para cada categoría. El código utiliza estos valores para calcular la huella de carbono a partir de los datos ingresados por el usuario. Se trata variables de estado que en un version superior 
+se podría modificar desde front.
 ```javascript
 const FACTORES_CO2_ANUAL = {
     TRANSPORTE_KM_POR_MES: 0.12,  // kg de CO2 por km recorrido en vehículo
