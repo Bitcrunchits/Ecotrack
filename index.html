@@ -53,7 +53,9 @@
                 <div class="text-blue-500 text-shadow-lg/150 dark:text-teal-600 font-bold p-0 mt-8">
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">ECOTRACK</h1>
                     <h4 class="text-xl sm:text-2xl md:text-3xl py-2">Tu huella del carbono personal</h4>
+                    
                 </div>
+              
             </header>
             <main>
                 <div class="max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto py-2 px-2 p-6 rounded-3xl
@@ -77,6 +79,13 @@
                                         y cómo puedes compensarla plantando árboles.
                                     </p>
                                 </div>
+                                        <form id="familia-form" class="mt-4 space-y-4">
+                                <label for="num-integrantes" class="text-white font-bold dark:text-gray-100 block text-lg">
+                                    Número de integrantes en tu familia:
+                                </label>
+                                <input type="number" id="num-integrantes" name="num_integrantes" required min="1" placeholder="Ej: 4"
+                                    class="w-1/2 p-2 rounded-md bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    </form>
                             </div>
                             <div class="swiper-slide">
                                 <form action="" id="gasolina">
@@ -105,6 +114,7 @@
                                                 class="w-1/2 p-2 rounded-md border-gray-600 bg-zinc-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 border  dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                         </div>
                                     </fieldset>
+                                </form>
                             </div>
                             <div class="swiper-slide">
                                 <form action="" id="electric">
@@ -180,9 +190,14 @@
                                         <p
                                             class="text-lg text-white font-bold dark:text-gray-200 text-shadow-lg/100 md:text-3xl lg:text-3xl">
                                             Huella anual
-                                            estimada: <span id="huella-total" class="font-bold text-cyan-200">--
+                                            estimada por familia: <span id="huella-total" class="font-bold text-cyan-200">--
                                                 kg
                                                 CO₂</span></p>
+                                        <p class="text-lg text-white font-bold dark:text-gray-200 text-shadow-lg/100 md:text-3xl lg:text-3xl">
+                                            Huella personal:<span id="huella-personal" class="font-bold text-cyan-200">--
+                                                kg
+                                                CO₂</span>
+                                        </p>
                                         <ul
                                             class="text-left list-disc pl-6 text-white font-bold dark:text-gray-200 text-shadow-lg/100 text-lg md:text-3xl lg:text-3xl">
                                             <li>Transporte: <span id="huella-transporte" class="text-cyan-200">-- kg

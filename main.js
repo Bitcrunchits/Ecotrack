@@ -117,6 +117,16 @@ swiper.on('slideChange', () => {
 
 
     switch (previousSlideIndex) {
+        case 0:
+    const numIntegrantesInput = document.getElementById('num-integrantes');
+    if (numIntegrantesInput) {
+        userResponses.familia = {
+            integrantes: parseInt(numIntegrantesInput.value)
+        };
+        console.log("Número de integrantes capturado:", userResponses.familia.integrantes);
+    }
+    break;
+
         case 1:
             const transportType = document.getElementById('transport-type');
             const kmTraveled = document.getElementById('km-traveled');
@@ -204,6 +214,8 @@ const handleCalculateButton = () => {
     // 3. Sumar para obtener la huella total
     const huellaTotal = huellaTransporte + huellaHogar + huellaAlimentacion;
     console.log(huellaTotal)
+    const integrantes = userResponses.familia?.integrantes || 1;
+    const huellapersonal = huellaTotal / integrantes;
 
 
     // 4. Calcular los árboles necesarios
@@ -215,6 +227,7 @@ const handleCalculateButton = () => {
     document.getElementById('huella-hogar').textContent = `${huellaHogar.toFixed(2)} kg CO₂`;
     document.getElementById('huella-alimentacion').textContent = `${huellaAlimentacion.toFixed(2)} kg CO₂`;
     document.getElementById('huella-total').textContent = `${huellaTotal.toFixed(2)} kg CO₂`;
+    document.getElementById('huella-personal').textContent = `${huellapersonal} kg CO₂`;
     document.getElementById('arboles-compensacion').textContent = `${arboles} árboles`;
 
     // Opcional: Desplazarse al slide de resultados
@@ -231,12 +244,14 @@ const handleBackButton = () => {
     const formTransporte = document.getElementById('gasolina');
     const formEnergia = document.getElementById('electric');
     const formAlimentos = document.getElementById('alimentacion');
+    const formintegrantes=document.getElementById('familia-form')
 
     if (formTransporte) formTransporte.reset();
     if (formEnergia) formEnergia.reset();
     if (formAlimentos) formAlimentos.reset();
+     if(formintegrantes) formintegrantes.reset();
 
-    swiper.slideTo(1); //Hace volver a pantalla 2
+    swiper.slideTo(0); //Hace volver a pantalla 2
 };
 
 if (backButton) {
