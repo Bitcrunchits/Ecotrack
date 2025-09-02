@@ -227,7 +227,7 @@ const handleCalculateButton = () => {
     document.getElementById('huella-hogar').textContent = `${huellaHogar.toFixed(2)} kg CO₂`;
     document.getElementById('huella-alimentacion').textContent = `${huellaAlimentacion.toFixed(2)} kg CO₂`;
     document.getElementById('huella-total').textContent = `${huellaTotal.toFixed(2)} kg CO₂`;
-    document.getElementById('huella-personal').textContent = `${huellapersonal} kg CO₂`;
+    document.getElementById('huella-personal').textContent = `${huellapersonal.toFixed(2)} kg CO₂`;
     document.getElementById('arboles-compensacion').textContent = `${arboles} árboles`;
 
     // Opcional: Desplazarse al slide de resultados
