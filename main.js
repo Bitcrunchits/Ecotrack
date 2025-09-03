@@ -241,17 +241,29 @@ if (calculateButton) {
 
 //*funcion para resetear los datos al presionar boton de volver
 const handleBackButton = () => {
-    const formTransporte = document.getElementById('gasolina');
-    const formEnergia = document.getElementById('electric');
-    const formAlimentos = document.getElementById('alimentacion');
-    const formintegrantes=document.getElementById('familia-form')
+    // 1. Limpiar los campos de todos los formularios
+    const allForms = document.querySelectorAll('form');
+    allForms.forEach(form => {
+        form.reset();
+    });
 
-    if (formTransporte) formTransporte.reset();
-    if (formEnergia) formEnergia.reset();
-    if (formAlimentos) formAlimentos.reset();
-     if(formintegrantes) formintegrantes.reset();
+    // 2. Limpiar el objeto de respuestas del usuario
+    for (const key in userResponses) {
+        if (userResponses.hasOwnProperty(key)) {
+            delete userResponses[key];
+        }
+    }
 
-    swiper.slideTo(0); //Hace volver a pantalla 2
+    // 3. Limpiar los resultados mostrados en la pantalla final
+    document.getElementById('huella-total').textContent = '-- kg CO₂';
+    document.getElementById('huella-transporte').textContent = '-- kg CO₂';
+    document.getElementById('huella-hogar').textContent = '-- kg CO₂';
+    document.getElementById('huella-alimentacion').textContent = '-- kg CO₂';
+    document.getElementById('huella-personal').textContent = '-- kg CO₂';
+    document.getElementById('arboles-compensacion').textContent = '-- árboles';
+
+    // 4. Volver a la primera pantalla
+    swiper.slideTo(0);
 };
 
 if (backButton) {
