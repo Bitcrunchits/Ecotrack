@@ -13,7 +13,7 @@ Se expresa en toneladas de CO₂ equivalente y cuantifica el impacto de una pers
 
 ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que esta diseñada para calcular la huella de carbono anual de tu hogar y también la personal. Esto quiere decir la cantidad de Kg de CO₂ (equivalente) que produduce la actividad de todas las personas de tu hogar y la individual a lo largo de un año. Además brinda información aproximada de cuantos arboles son necesarios plantar para compensar la contaminación producida con CO₂.
 
-## Calcula la cantidad de CO₂ que liberan en tus actividades en un año
+## Calcula la cantidad de CO₂ que liberas con tus actividades en un año
 
 ### Pantallas de ingreso de datos
 En la pantalla **Inicial** debes:
