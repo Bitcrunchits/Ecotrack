@@ -1,6 +1,6 @@
 # ECOTRACK
 ## Introducción 
-## Descripcion de la APP
+
 La huella de carbono es un indicador ambiental que mide la cantidad total de gases de efecto invernadero (GEI) emitidos de forma directa o indirecta por **actividades humanas:**
 1. Consumo de energía.
 1. Transporte.
@@ -8,40 +8,42 @@ La huella de carbono es un indicador ambiental que mide la cantidad total de gas
 
 Se expresa en toneladas de CO₂ equivalente y cuantifica el impacto de una persona, hogar, empresa, producto o país en el cambio climático. 
 
-## Nuestra App
+## Descripcion de la APP
 <img src="./assets/ecotrack1.jpg" alt="Captura de pantalla de la app" width="30%" >
 
-ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que esta diseñada para calcular la huella de carbono personal anual (o la de tu hogar). Esto quiere decir la cantidad de Kg de CO₂ (equivalente) que produduce tu actividad o la de tu hogar a lo largo de un año. También brinda información aproximada de cuantos arboles son necesarios plantar para compensar la contaminación producida CO₂.
+ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que esta diseñada para calcular la huella de carbono anual de tu hogar y también la personal. Esto quiere decir la cantidad de Kg de CO₂ (equivalente) que produduce la actividad de todas las personas de tu hogar y la individual a lo largo de un año. Además brinda información aproximada de cuantos arboles son necesarios plantar para compensar la contaminación producida con CO₂.
 
 ## Calcula la cantidad de CO₂ que liberan en tus actividades en un año
 
 ### Pantallas de ingreso de datos
+En la pantalla **Inicial** debes:
+
+<img src="./assets/ecotrackA.jpg" alt="Captura de pantalla de la app" width="50%">
+
+* **Ingresar el número de personas que residen en tu hogar.**
+
 
 En la pantalla **Transporte** debes:
 
-<img src="./assets/ecotrack3.jpg" alt="Captura de pantalla de la app" width="50%">
+<img src="./assets/ecotrackB.jpg" alt="Captura de pantalla de la app" width="50%">
 
-**1. Seleccionar tu medio de transporte habitual.**
+**1. Seleccionar el medio de transporte habitual.**
 
-**2. Ingresar los kilometros mensuales aproximados que recorres.**
+**2. Ingresar los kilometros mensuales recorridos aproximados.**
 
+Ejemplo: Si dos personas utilizan un auto sin compartir el vehiculo, podria ser en horarios diferentes. Y cada persona realiza 100 Km al mes, deberan ingresarse 200 Km.  
 
 
 En la pantalla **Consumo de energía** debes:
 
-<img src="./assets/ecotrack5.jpg" alt="Captura de pantalla de la app" width="50%">
+<img src="./assets/ecotrackC.jpg" alt="Captura de pantalla de la app" width="50%">
 
-**1. Ingresar el número de kWh que consumes por mes en el campo Kilowatts en el hogar.** 
+**1. Ingresar el número de kWh consumidos en el hogar.** 
 
 #### ¿Como obtienes este dato?
 Recuerda que en Argentina los datos de consumo en kWh son bimestrales. De manera que si en tu boleta figura por ejemplo: 400 kWh debes dividir por 2.
 
 * 400 kWh/2 = 200 kWh
-
-Otra cosa a tener en cuenta es que si en tu hogar viven 4 personas, los 200 kWh de consumo mensual deben dividirse por 4.
-
-* 200 kWh/4 = 50 kWh
-Por lo que tu consumo mensual es de 50 kWh.
 
 **2. Ingresar el número de m³ de gas que consumes por mes en el campo Gas en casa.**
 #### ¿Como obtienes este dato?
@@ -51,39 +53,32 @@ Recuerda que en Argentina los datos de **m³** de gas se muestran como 6 grupos 
 
 Segun esta boleta debes sumar 934 m³+ 222 m³ + 110 m³ + 144 m³ + 553 m³ + 1349 m³ y dividirlo en 12 meses.
 * (934 m³ + 222 m³ + 110 m³ + 144 m³ + 553 m³ + 1349 m³)/12 = 276 m³ mensuales en el hogar. 
-Pero si en tu hogar viven 4 personas seria 276 m³ dividido 4:
-* 276 m³/4 = **69 m³ mensuales por persona.**
 
-**3. Ingresar el número de Kg de consumo de leña (opcional).**
+**3. Ingresar el número de Kg de consumo de leña o carbón (opcional).**
 
-Un calculo aproximado seria: Si una familia de 4 personas come un asado por mes, consume  8 Kg de leña o carbón para hacer el fuego, de manera que debes ingresar 2 kg de leña por mes.
+Un número aproximado seria: Si en tu hogar habitan 4 personas y comen un asado por mes,se consume aproximadamente 6 Kg de leña y/o carbón en total para hacer un asado.
 
 En la pantalla **Alimentación** debes:
 
-<img src="./assets/ecotrack7.jpg" alt="Captura de pantalla de la app" width="50%">
+<img src="./assets/ecotrackD.jpg" alt="Captura de pantalla de la app" width="50%">
 
 
-**1. Ingresar el número de Kg de carne consumida en el mes.** 
+**1. Ingresar el número de Kg de carne consumida por mes en el hogar.** 
 
-Al igual que en los ejemplos anteriores, si tu hogar esta compuesto de 4 personas debes dividir los Kg totales mensuales de carne consumida por cuatro. Por ejemplo, si se consumen 40 kg mensuales en tu hogar, deberas ingresar 10 kg de carne.
+Un número aproximado seria: si en tu hogar se consumen 2 Kg de carne por semana , son 8 kg de carne en el mes.
 
-**2. Ingresar el número de **Kg** de verdura consumida en el mes.**
+**2. Ingresar el número de **Kg** de verdura consumida por mes en el hogar.**
 
- Como en el ejemplo anterior, si tu hogar esta compuesto de 4 personas debes dividir los Kg totales mensuales de verdura consumida por cuatro. Por ejemplo, si se consumen 60 kg mensuales en tu hogar, deberas ingresar 15 kg de carne.
+ Como en el ejemplo anterior, si en tu hogar se consumen 5 Kg de verdura por semana, son 20 kg  de verdura mensuales.
 
 Pantalla de **Resultados**:
-**<div><span style="color: red;">En Construcción </span></div>**
 
-## Tecnologías y Librerías 💻
-* **HTML5, CSS3 y JavaScript (Vanilla JS):** El corazón del proyecto, usado para la estructura, el estilo y la lógica principal.
-* **Tailwind CSS:** Framework CSS utility-first para un desarrollo de diseño rápido y responsivo.
-* **Swiper.js:** Librería de carrusel utilizada para crear la interfaz de usuario de múltiples pasos, lo que mejora la experiencia del usuario.
-* **Boxicons:** Librería de íconos que añade elementos visuales a la interfaz, como el botón de modo oscuro.
-## Documentación de Referencia:
-* [Swiper.js Docs](https://swiperjs.com/get-started)
-* [Tailwind CSS Docs](https://tailwindcss.com/docs)
-* [Boxicons Docs](https://boxicons.com/)
 
+<img src="./assets/ecotrackE.jpg" alt="Captura de pantalla de la app" width="50%">
+
+
+Se muestra de manera clara y directa la cantidad de Kg de CO₂ producido por la actividad de todas las personas de un hogar, como la cantidad producida por cada persona en un año.
+Ademas lo producido por cada actividad específica y el numero de arboles necesarios para capturar esa cantidad de CO₂.
 
 ## Instalación y Ejecución ▶️
 
@@ -223,6 +218,20 @@ swiper.on('slideChange', () => {
     handleForm();
 });
 ```
+## Tecnologías y Librerías 💻
+* **HTML5, CSS3 y JavaScript (Vanilla JS):** El corazón del proyecto, usado para la estructura, el estilo y la lógica principal.
+* **Tailwind CSS:** Framework CSS utility-first para un desarrollo de diseño rápido y responsivo.
+* **Swiper.js:** Librería de carrusel utilizada para crear la interfaz de usuario de múltiples pasos, lo que mejora la experiencia del usuario.
+* **Boxicons:** Librería de íconos que añade elementos visuales a la interfaz, como el botón de modo oscuro.
+## Documentación de Referencia:
+* [Swiper.js Docs](https://swiperjs.com/get-started)
+* [Tailwind CSS Docs](https://tailwindcss.com/docs)
+* [Boxicons Docs](https://boxicons.com/)
+
+## Integrantes ​👨‍🦱
+* Burdiles Adrian
+* Soto Agustín
+* Spagnolo Emiliano
 
 ## Licencia 📜
 <small>Este software está bajo la licencia MIT. Esto significa que puedes usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del software. La única condición es que se debe incluir el aviso de copyright y la licencia en todas las copias o partes sustanciales del software.
