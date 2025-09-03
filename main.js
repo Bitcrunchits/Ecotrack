@@ -48,7 +48,7 @@ const swiper = new Swiper('.swiper', {
     },
 
 });
-// swiper.slideTo(swiper.slides.length - 1, 0); //* esto lo hice para stilar la ultima pantalla y cada vez que refresque queria verla directamente
+swiper.slideTo(swiper.slides.length - 1, 0); //* esto lo hice para stilar la ultima pantalla y cada vez que refresque queria verla directamente
 
 //!Logica de CAPTURA DE DATOS en pantalla usando swiper-js
 
