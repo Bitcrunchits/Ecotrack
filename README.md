@@ -9,9 +9,10 @@ La huella de carbono es un indicador ambiental que mide la cantidad total de gas
 Se expresa en toneladas de CO₂ equivalente y cuantifica el impacto de una persona, hogar, empresa, producto o país en el cambio climático. 
 
 ## Descripcion de la APP
-<img src="./assets/ecotrack1.jpg" alt="Captura de pantalla de la app" width="30%" >
 
 ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que esta diseñada para calcular la huella de carbono anual de tu hogar y también la personal. Esto quiere decir la cantidad de Kg de CO₂ (equivalente) que produduce la actividad de todas las personas de tu hogar y la individual a lo largo de un año. Además brinda información aproximada de cuantos arboles son necesarios plantar para compensar la contaminación producida con CO₂.
+
+<img src="./assets/ecotrack1.jpg" alt="Captura de pantalla de la app" width="30%" >
 
 ## Calcula la cantidad de CO₂ que liberas con tus actividades en un año
 
