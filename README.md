@@ -74,12 +74,10 @@ Un número aproximado seria: si en tu hogar se consumen 2 Kg de carne por semana
 
 Pantalla de **Resultados**:
 
-
-<img src="./assets/ecotrackE.jpg" alt="Captura de pantalla de la app" width="50%">
-
-
 Se muestra de manera clara y directa la cantidad de Kg de CO₂ producido por la actividad de todas las personas de un hogar, como la cantidad producida por cada persona en un año.
 Ademas lo producido por cada actividad específica y el numero de arboles necesarios para capturar esa cantidad de CO₂.
+
+<img src="./assets/ecotrackE.jpg" alt="Captura de pantalla de la app" width="50%">
 
 ## Instalación y Ejecución ▶️
 
