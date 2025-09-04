@@ -20,8 +20,8 @@ ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que est
 En la pantalla **Inicial** debes:
 
 * **Ingresar el número de personas que residen en tu hogar.**
-* 
-  <img src="./assets/ecotrackA.jpg" alt="Captura de pantalla de la app" width="50%">
+ 
+<img src="./assets/ecotrackA.jpg" alt="Captura de pantalla de la app" width="50%">
 
 
 En la pantalla **Transporte** debes:
