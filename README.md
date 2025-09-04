@@ -19,25 +19,22 @@ ECOTRACK es una App adaptable a las pantallas de diferentes dispositivos que est
 ### Pantallas de ingreso de datos
 En la pantalla **Inicial** debes:
 
-<img src="./assets/ecotrackA.jpg" alt="Captura de pantalla de la app" width="50%">
-
 * **Ingresar el número de personas que residen en tu hogar.**
+* 
+  <img src="./assets/ecotrackA.jpg" alt="Captura de pantalla de la app" width="50%">
 
 
 En la pantalla **Transporte** debes:
-
-<img src="./assets/ecotrackB.jpg" alt="Captura de pantalla de la app" width="50%">
-
 **1. Seleccionar el medio de transporte habitual.**
 
 **2. Ingresar los kilometros mensuales recorridos aproximados.**
 
 Ejemplo: Si dos personas utilizan un auto sin compartir el vehiculo, podria ser en horarios diferentes. Y cada persona realiza 100 Km al mes, deberan ingresarse 200 Km.  
 
+<img src="./assets/ecotrackB.jpg" alt="Captura de pantalla de la app" width="50%">
+
 
 En la pantalla **Consumo de energía** debes:
-
-<img src="./assets/ecotrackC.jpg" alt="Captura de pantalla de la app" width="50%">
 
 **1. Ingresar el número de kWh consumidos en el hogar.** 
 
@@ -58,6 +55,8 @@ Segun esta boleta debes sumar 934 m³+ 222 m³ + 110 m³ + 144 m³ + 553 m³ + 1
 **3. Ingresar el número de Kg de consumo de leña o carbón (opcional).**
 
 Un número aproximado seria: Si en tu hogar habitan 4 personas y comen un asado por mes,se consume aproximadamente 6 Kg de leña y/o carbón en total para hacer un asado.
+
+<img src="./assets/ecotrackC.jpg" alt="Captura de pantalla de la app" width="50%">
 
 En la pantalla **Alimentación** debes:
 
