@@ -25,6 +25,7 @@ En la pantalla **Inicial** debes:
 
 
 En la pantalla **Transporte** debes:
+
 **1. Seleccionar el medio de transporte habitual.**
 
 **2. Ingresar los kilometros mensuales recorridos aproximados.**
@@ -60,8 +61,6 @@ Un número aproximado seria: Si en tu hogar habitan 4 personas y comen un asado 
 
 En la pantalla **Alimentación** debes:
 
-<img src="./assets/ecotrackD.jpg" alt="Captura de pantalla de la app" width="50%">
-
 
 **1. Ingresar el número de Kg de carne consumida por mes en el hogar.** 
 
@@ -70,6 +69,8 @@ Un número aproximado seria: si en tu hogar se consumen 2 Kg de carne por semana
 **2. Ingresar el número de **Kg** de verdura consumida por mes en el hogar.**
 
  Como en el ejemplo anterior, si en tu hogar se consumen 5 Kg de verdura por semana, son 20 kg  de verdura mensuales.
+
+ <img src="./assets/ecotrackD.jpg" alt="Captura de pantalla de la app" width="50%">
 
 Pantalla de **Resultados**:
 
